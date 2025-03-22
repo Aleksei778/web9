@@ -13,7 +13,7 @@ class BaseActiveRecord {
                 "postgres",
                 "postgres"
             );
-            $this->pdo->setAttibute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             throw new Exception("Ошибка подключения к БД: " . $e->getMessage());
         }
