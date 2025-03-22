@@ -3,14 +3,14 @@ $(document).ready(function() {
     const mainMenuItems = $mainMenu.find('li');
     console.log(mainMenuItems);
     const menuImages = {
-        '/web/main/index': ['/web/public/assets/imgs/icons_for_menu1/mainPage.svg', '/web/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
-        '/web/main/actionAboutMe': ['/web/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/web/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
-        '/web/main/actionMyHobbies': ['/web/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/web/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
-        '/web/main/actionStudy': ['/web/public/assets/imgs/icons_for_menu1/study.svg', '/web/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
-        '/web/main/actionPhotoAlbum': ['/web/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/web/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
-        '/web/main/actionContact': ['/web/public/assets/imgs/icons_for_menu1/contact.svg', '/web/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
-        '/web/main/actionDisciplineTest': ['/web/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/web/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
-        '/web/main/actionHistory': ['/web/public/assets/imgs/icons_for_menu1/history.svg', '/web/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
+        '/web/web9/main/index': ['/web/web9/public/assets/imgs/icons_for_menu1/mainPage.svg', '/web/web9/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
+        '/web/web9/main/actionAboutMe': ['/web/web9/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/web/web9/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
+        '/web/web9/main/actionMyHobbies': ['/web/web9/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/web/web9/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
+        '/web/web9/main/actionStudy': ['/web/web9/public/assets/imgs/icons_for_menu1/study.svg', '/web/web9/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
+        '/web/web9/main/actionPhotoAlbum': ['/web/web9/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/web/web9/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
+        '/web/web9/main/actionContact': ['/web/web9/public/assets/imgs/icons_for_menu1/contact.svg', '/web/web9/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
+        '/web/web9/main/actionDisciplineTest': ['/web/web9/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/web/web9/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
+        '/web/web9/main/actionHistory': ['/web/web9/public/assets/imgs/icons_for_menu1/history.svg', '/web/web9/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
     };
     
 
@@ -76,17 +76,17 @@ $(document).ready(function() {
         }
     });
 
-    const $hobbiesMenu = $('a[href="/web/main/actionMyHobbies"]').parent();
+    const $hobbiesMenu = $('a[href="/web/web9/main/actionMyHobbies"]').parent();
     const $submenu = $('<ul>', {
         class: 'submenu'
     });
 
     // Добавляем подпункты
     const subItems = [
-        { text: 'Хобби', href: '/web/main/actionMyHobbies#hobby' },
-        { text: 'Фильмы', href: '/web/main/actionMyHobbies#films' },
-        { text: 'Музыка', href: '/web/main/actionMyHobbies#music' },
-        { text: 'Книги', href: '/web/main/actionMyHobbies#books' }
+        { text: 'Хобби', href: '/web/web9/main/actionMyHobbies#hobby' },
+        { text: 'Фильмы', href: '/web/web9/main/actionMyHobbies#films' },
+        { text: 'Музыка', href: '/web/web9/main/actionMyHobbies#music' },
+        { text: 'Книги', href: '/web/web9/main/actionMyHobbies#books' }
     ];
 
     subItems.forEach(function(item) {

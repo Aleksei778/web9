@@ -5,7 +5,7 @@
     </h2>
     <div class="info-container">
         <div class="test-form">
-            <form action="/web/main/validateTest" method="POST" id="testForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateTest" method="POST" id="testForm" style="position: sticky; z-index: 1000;">
                 <!-- Отдельный раздел "Информация о пользователе" -->
                 <fieldset>
                     <legend>Информация о пользователе</legend>

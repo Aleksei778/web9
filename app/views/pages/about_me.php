@@ -6,7 +6,7 @@
         <!-- Фотография -->
         <div class="me-bio">
             <h3 class="highlight">Фоточка</h3>
-            <img src="/web/public/assets/imgs/photo2.jpg" alt="ето я" class="my-photo">
+            <img src="/web/web9/public/assets/imgs/photo2.jpg" alt="ето я" class="my-photo">
         </div>
         <!-- Сама автобиография -->
         <div class="me-bio">

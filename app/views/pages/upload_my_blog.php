@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/web/main/validateContact" method="POST" enctype="multipart/form-data" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateContact" method="POST" enctype="multipart/form-data" id="contactForm" style="position: sticky; z-index: 1000;">
                 <!-- Загрузка файла -->
                 <label for="file">Загрузка CSV-файла:</label>
                 <input type="file" id="csv_file" name="csv_file" accept=".csv" required>

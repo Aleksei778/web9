@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(mainMenuItems);
 
     const menuImages = {
-        '/index': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/mainPage.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
-        '/actionAboutMe': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
-        '/actionMyHobbies': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
-        '/actionStudy': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/study.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
-        '/actionPhotoAlbum': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
-        '/actionContact': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/contact.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
-        '/actionDisciplineTest': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
-        '/actionHistory': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/history.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
+        '/index': ['/web/web9/public/assets/imgs/icons_for_menu1/mainPage.svg', '/web/web9/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
+        '/actionAboutMe': ['/web/web9/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/web/web9/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
+        '/actionMyHobbies': ['/web/web9/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/web/web9/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
+        '/actionStudy': ['/web/web9/public/assets/imgs/icons_for_menu1/study.svg', '/web/web9/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
+        '/actionPhotoAlbum': ['/web/web9/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/web/web9/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
+        '/actionContact': ['/web/web9/public/assets/imgs/icons_for_menu1/contact.svg', '/web/web9/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
+        '/actionDisciplineTest': ['/web/web9/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/web/web9/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
+        '/actionHistory': ['/web/web9/public/assets/imgs/icons_for_menu1/history.svg', '/web/web9/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
     };
 
     // Определяем текущую страницу
