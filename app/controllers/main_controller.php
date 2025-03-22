@@ -287,16 +287,18 @@ class MainController extends Controller {
     }
 
     public function getUploadErrorMessage($error_code) {
-        case UPLOAD_ERR_INI_SIZE:
-            return 'Размер файла превышает доступный в php.ini';
-        case UPLOAD_ERR_FORM_SIZE:
-            return 'Размер файла превышает допустимый лимит формы.';
-        case UPLOAD_ERR_PARTIAL:
-            return 'Файл был загружен частично.';
-        case UPLOAD_ERR_NO_FILE:
-            return 'Файл не был загружен.';
-        default:
-            return 'Неизвестная ошибка загрузки.';
+        switch ($error_code) {
+            case UPLOAD_ERR_INI_SIZE:
+                return 'Размер файла превышает доступный в php.ini';
+            case UPLOAD_ERR_FORM_SIZE:
+                return 'Размер файла превышает допустимый лимит формы.';
+            case UPLOAD_ERR_PARTIAL:
+                return 'Файл был загружен частично.';
+            case UPLOAD_ERR_NO_FILE:
+                return 'Файл не был загружен.';
+            default:
+                return 'Неизвестная ошибка загрузки.';
+        }
     }
 
     public function actionRedactorBloga() {
