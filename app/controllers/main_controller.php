@@ -3,7 +3,7 @@
 require_once 'models/photo_model.php';
 require_once 'models/interest_model.php';
 require_once 'models/test_model.php';
-require_once 'models/blog_model';
+require_once 'models/blog_model.php';
 
 class MainController extends Controller {
     // Основной метод, который будет вызываться по умолчанию
