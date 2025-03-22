@@ -54,7 +54,7 @@ class MainController extends Controller {
     }
 
     public function actionDisciplineTest() {
-        $results = TestModel::getAllResults();
+        $results = TestModel::getAllTestResults();
     
         // Подготовка данных для передачи в представление
         $model = [
