@@ -109,7 +109,7 @@ class MainController extends Controller {
         }
     
         // Получение всех сохранённых результатов из базы данных
-        $results = TestModel::getAllResults();
+        $results = TestModel::getAllTestResults();
     
         // Подготовка данных для передачи в представление
         $model = [
