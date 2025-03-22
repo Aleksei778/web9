@@ -237,6 +237,7 @@ class MainController extends Controller {
                         }
 
                         [$title, $message, $author, $created_at] = $data;
+                    }
                 }
             } else {
                 $error = 'Ошибка загрузки CSV-файла: ' . $this->getUploadErrorMessage($file['error']);
