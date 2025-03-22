@@ -1,6 +1,6 @@
 RewriteEngine On
 # Укажи базовый путь относительно корня веб-сервера
-RewriteBase /web/app/
+RewriteBase /web/web9/app/
 
 # Пропускаем реальные файлы и директории
 RewriteCond %{REQUEST_FILENAME} !-f
