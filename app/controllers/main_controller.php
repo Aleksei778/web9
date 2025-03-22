@@ -123,6 +123,10 @@ class MainController extends Controller {
         $this->view->render('pages/discipline_test.php', 'Тест по дисциплине', $model);
     }
 
+    public function actionUploadGuestBook() {
+        $this->view->render('pages/upload_guestbook.php', 'Загрузка гостевой книги');
+    }
+
     public function validateContact() {
         $this->model->validator->SetRule('fullName', 'isNotEmpty');
         $this->model->validator->SetRule('Email', 'isEmail');
