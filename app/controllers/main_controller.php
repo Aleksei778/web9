@@ -167,7 +167,7 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($this->model->validate($_POST)) {
+            if ($this->model->validator->Validate($_POST)) {
                 $second_name = trim($_POST['second_name']);
                 $first_name = trim($_POST['first_name']);
                 $middle_name = trim($_POST['middle_name']);
@@ -313,7 +313,7 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($this->model->validate($_POST)) {
+            if ($this->model->validator->Validate($_POST)) {
                 $msg_theme = trim($_POST['msg_theme']);
                 $image = trim($_POST['image']);
                 $message = trim($_POST['message']);
