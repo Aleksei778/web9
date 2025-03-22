@@ -69,6 +69,10 @@ class MainController extends Controller {
         $this->view->render('pages/history.php', 'История просмотра');
     }
 
+    public function actionGuestBook() {
+        $this->view->render('pages/guestbook.php', 'Гостевая книга');
+    }
+
     public function validateTest() {
         // Настройка правил валидации
         $this->model->results_validator->SetTestsRule('fullName', 'isValidFio');
@@ -152,7 +156,7 @@ class MainController extends Controller {
         }
     }
 
-    public function proccessGuestBook() {
+    public function validateGuestBook() {
         $this->model->validator->setRule('second_name', 'isNotEmpty');
         $this->model->validator->setRule('first_name', 'isNotEmpty');
         $this->model->validator->setRule('middle_name', 'isNotEmpty');

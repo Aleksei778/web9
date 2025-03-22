@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/laba8/LABA8/main/validateContact" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateGuestBook" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
                 <!-- Фамилия -->
                 <label for="second_name">Фамилия:</label>
                 <input type="text" name="second_name" id="second_name" placeholder="Введите фамилию" class="contact_form-input" data-format="Пархоменко">
