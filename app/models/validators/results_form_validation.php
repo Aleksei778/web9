@@ -1,6 +1,6 @@
 <?php
 
-require_once '/opt/lampp/htdocs/web/web9/app/models/validators/custom_form_validation.php';
+require_once 'models/validators/custom_form_validation.php';
 
 class ResultsVerification extends CustomFormValidation {
     private $result_rules = [];
