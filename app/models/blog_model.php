@@ -12,8 +12,8 @@ class BlogModel extends BaseActiveRecord {
     public static function createPost($topic, $content, $image = null) {
         $post = new self();
         $post->topic = $topic;
-        $post->content = $content;
         $post->image = $image;
+        $post->content = $content_text;
         $post->created_at = date('Y-m-d H:i:s');
 
         return $post->save();
