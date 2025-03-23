@@ -224,16 +224,16 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $file = $_FILES['messages_file'];
+            $file = $_FILES['csv_file'];
 
-            if (isset($_FILES['csv_file']) && $file['error'] === UPLOAD_ERR_OK) {
-                $file = $_FILES['csv_file']['tmp_name'];
-                $fileType = mime_content_type($file);
+            if (isset($file) && $file['error'] === UPLOAD_ERR_OK) {
+                $file_t = $_FILES['csv_file']['tmp_name'];
+                $fileType = mime_content_type($file_t);
 
                 if ($fileType !== 'text/csv') {
                     $errors['csv_file'] = "Файл должен быть в формате CSV";
                 } else {
-                    $handle = fopen($file, 'r');
+                    $handle = fopen($file_t, 'r');
                     $row = 0;
                     $successCount = 0;
 
