@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/web/web9/main/validateContact" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateRedactorBloga" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
                 <!-- Фамилия -->
                 <label for="msg_theme">Тема сообщения:</label>
                 <input type="text" name="msg_theme" id="msg_theme" placeholder="Введите тему сообщения" class="contact_form-input">
@@ -32,6 +32,18 @@
                     <div class="success-message"><?php echo $model['message']; ?></div>
                 <?php endif; ?>
             </form>
+        </div>
+    </div>
+</section>
+
+<section class="info-aboutme">
+    <h2>
+        Где посмотреть данные
+    </h2>
+    <div class="info-container">
+        <div class="me-bio">
+            <h3 class="highlight">Информация</h3>
+            <p>Для просмотра данных перейдите на страницу <a href="/web/web9/actionMyBlog">"Мой Блог"</a></p>
         </div>
     </div>
 </section>
