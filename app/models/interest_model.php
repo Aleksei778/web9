@@ -16,7 +16,7 @@ class Interest {
                 'Футбол',
                 'Плавание'
             ],
-            'image' => '/laba8/LABA8/public/assets/imgs/basket.jpg',
+            'image' => '/web/web9/public/assets/imgs/basket.jpg',
             'alt' => 'basketball'
         ],
         'Кодинг' => [
@@ -26,7 +26,7 @@ class Interest {
                 'Python',
                 'PHP'
             ],
-            'image' => '/laba8/LABA8/public/assets/imgs/fastapi.jpg',
+            'image' => '/web/web9/public/assets/imgs/fastapi.jpg',
             'alt' => 'fastapi'
         ],
     ];
@@ -35,15 +35,15 @@ class Interest {
             'en' => 'films',
             'items' => [
                 'Дюна' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/dune.jpeg',
+                    'image' => '/web/web9/public/assets/imgs/dune.jpeg',
                     'alt' => 'dune'
                 ],
                 'Гарри Поттер' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/harry_potter.jpg',
+                    'image' => '/web/web9/public/assets/imgs/harry_potter.jpg',
                     'alt' => 'harry potter'
                 ],
                 'Джон Уик' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/john.jpeg',
+                    'image' => '/web/web9/public/assets/imgs/john.jpeg',
                     'alt' => 'john wick'
                 ]
             ]
@@ -52,15 +52,15 @@ class Interest {
             'en' => 'music',
             'items' => [
                 'Redda' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/redda.jpg',
+                    'image' => '/web/web9/public/assets/imgs/redda.jpg',
                     'alt' => 'Redda'
                 ],
                 'Dom Corleo' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/dom_corleo.jpeg',
+                    'image' => '/web/web9/public/assets/imgs/dom_corleo.jpeg',
                     'alt' => 'dom corleo'
                 ],
                 'Kai Angel & 9mice' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/kaiangel_9mice.jpg',
+                    'image' => '/web/web9/public/assets/imgs/kaiangel_9mice.jpg',
                     'alt' => 'Kai Angel & 9mice'
                 ]
             ]
@@ -69,15 +69,15 @@ class Interest {
             'en' => 'books',
             'items' => [
                 'Дюна' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/dune_book.jpg',
+                    'image' => '/web/web9/public/assets/imgs/dune_book.jpg',
                     'alt' => 'Дюна'
                 ],
                 'Голодные игры' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/games_book.jpg',
+                    'image' => '/web/web9/public/assets/imgs/games_book.jpg',
                     'alt' => 'Голодные игры'
                 ],
                 'Мастер и Маргарита' => [
-                    'image' => '/laba8/LABA8/public/assets/imgs/master_book.jpg',
+                    'image' => '/web/web9/public/assets/imgs/master_book.jpg',
                     'alt' => 'Мастер и Маргарита'
                 ]
             ]
