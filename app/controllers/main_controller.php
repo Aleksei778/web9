@@ -228,7 +228,7 @@ class MainController extends Controller {
                 $file = $_FILES['csv_file']['tmp_name'];
                 $fileType = mime_content_type($file);
                 echo $fileType;
-                if ($fileType !== 'text/csv' && $fileType !== 'application/vnd.ms-excel') {
+                if (!in_array($fileType, ['text/csv', 'text/plain', 'application/vnd.ms-excel'])) {
                     $error = "Файл должен быть в формате CSV";
                 } else {
 
