@@ -34,7 +34,7 @@ class TestModel extends BaseActiveRecord {
             echo $test->attributes['full_name'];
             $tests[] = $test;
         }
-
+        echo $tests[0]->attributes['full_name'];
         return $tests;
     }
 }
