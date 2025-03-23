@@ -244,16 +244,16 @@ class MainController extends Controller {
 
                         // Проверка количества полей
                         if (count($data) !== 3) {
-                            $errors[] = "Ошибка в строке $row: неверное количество полей";
+                            $error = "Ошибка в строке $row: неверное количество полей";
                             continue;
                         }
 
                         [$title, $message, $created_at] = $data;
                         echo $title;
                         BlogModel::createPost($title, $message, $created_at);
-
-                        $success_message = 'Пост успешно создан!';
                     }
+
+                    $success_message = 'Посты успешно созданы!';
                 }
             } else {
                 $error = 'Ошибка загрузки CSV-файла: ' . $this->getUploadErrorMessage($file['error']);
