@@ -335,7 +335,7 @@ class MainController extends Controller {
 
         $model = [
             'errors' => $errors,
-            'message' => success_message
+            'message' => $success_message
         ];
 
         $this->view->render('pages/redactor_bloga.php', 'Редактор блога', $model);
