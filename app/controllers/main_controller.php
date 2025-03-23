@@ -244,7 +244,7 @@ class MainController extends Controller {
 
                         // Проверка количества полей
                         if (count($data) !== 3) {
-                            echo "  count  {count($data)}";
+                            echo "  count  " . count($data);
                             $error = "Ошибка в строке $row: неверное количество полей";
                             continue;
                         }
