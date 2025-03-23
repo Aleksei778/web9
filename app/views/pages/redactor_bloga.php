@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/web/web9/main/validateRedactorBloga" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateRedactorBloga" method="POST" id="contactForm" style="position: sticky; z-index: 1000;" enctype="multipart/form-data">
                 <!-- Фамилия -->
                 <label for="msg_theme">Тема сообщения:</label>
                 <input type="text" name="msg_theme" id="msg_theme" placeholder="Введите тему сообщения" class="contact_form-input">
