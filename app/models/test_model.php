@@ -24,6 +24,7 @@ class TestModel extends BaseActiveRecord {
         echo $instance->tableName;
         $sql = "SELECT * FROM {$instance->tableName} ORDER BY created_at DESC";
         $stmt = $instance->pdo->prepare($sql);
+        $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo $results[0];
         $tests = [];
