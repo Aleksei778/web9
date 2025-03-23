@@ -24,10 +24,10 @@ class TestModel extends BaseActiveRecord {
         $sql = "SELECT * FROM {$instance->tableName} ORDER BY created_at DESC";
         $stmt = $instance->pdo->prepare($sql);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+        echo $results[0];
         $tests = [];
         foreach ($results as $result) {
-            echo $result . '<br>';
+            echo $result;
             $test = new self();
 
             $test->id = $result['id'];
@@ -35,9 +35,9 @@ class TestModel extends BaseActiveRecord {
             $test->attributes = $result;
 
             $tests[] = $test;
-            echo $test . '<br>';
+            echo $test;
         }
-
+        echo $tests[0];
         return $tests;
     }
 }
