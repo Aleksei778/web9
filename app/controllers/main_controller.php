@@ -308,7 +308,7 @@ class MainController extends Controller {
         }
     }
 
-    public function actionRedactorBloga() {
+    public function validateRedactorBloga () {
         $this->model->validator->setRule('msg_theme', 'isNotEmpty');
         $this->model->validator->setRule('message', 'isNotEmpty');
 
@@ -333,19 +333,15 @@ class MainController extends Controller {
             }
         }
 
-        $perPage = 5;
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        if ($page < 1) $page = 1; // Защита от отрицательных значений
-
-        $totalPages = BlogModel::getTotalPosts(); // Общее количество страниц
-        $posts = BlogModel::getPostsWithPagination($page, $perPage);
-
         $model = [
-            'page' => $page,
-            'totalPages' => $totalPages,
-            'posts' => $posts
+            'errors' => $errors,
+            'message' => success_message
         ];
 
         $this->view->render('pages/redactor_bloga.php', 'Редактор блога', $model);
+    }
+
+    public function actionRedactorBloga() {
+        $this->view->render('pages/redactor_bloga.php', 'Редактор блога');
     }
 }
