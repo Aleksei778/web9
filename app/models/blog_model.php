@@ -36,9 +36,9 @@ class BlogModel extends BaseActiveRecord {
 
         $offset = ($page - 1) * $perPage;
 
-        $sql = "SELECT * FROM {$instance->tableName} ORDER BY created_at DESC LIMIT :offset, :perPage";
+        $sql = "SELECT * FROM {$instance->tableName} ORDER BY created_at DESC LIMIT $1 OFFSET $2";
         $stmt = $instance->pdo->prepare($sql);
-        $stmt->execute([":offset" => $offset, ":perPage" => $perPage]);
+        $stmt->execute([$perPage, $offset]);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $posts = [];
