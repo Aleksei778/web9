@@ -5,12 +5,12 @@
     <?php if (count($posts) > 0): ?>
         <?php foreach ($posts as $post): ?>
             <div>
-                <h3><?php echo htmlspecialchars($post['topic']); ?></h3>
-                <?php if ($post['image']): ?>
-                    <img src="<?php echo htmlspecialchars($post['image']); ?>" alt="Изображение" width="200"><br>
+                <h3><?php echo htmlspecialchars($post->topic); ?></h3>
+                <?php if ($post->image): ?>
+                    <img src="<?php echo htmlspecialchars($post->image); ?>" alt="Изображение" width="200"><br>
                 <?php endif; ?>
-                <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
-                <small>Дата: <?php echo $post['created_at']; ?></small>
+                <p><?php echo nl2br(htmlspecialchars($post->content_text)); ?></p>
+                <small>Дата: <?php echo $post->created_at; ?></small>
             </div>
         <?php endforeach; ?>
 
