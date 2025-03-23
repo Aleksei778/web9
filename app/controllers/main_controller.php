@@ -271,7 +271,7 @@ class MainController extends Controller {
                 $fileTmpPath = $file['tmp_name'];
 
                 if ($fileName === 'messages.inc') {
-                    $destination = '../uploads/messages.inc';
+                    $destination = '../messages.inc';
                     if (move_uploaded_file($fileTmpPath, $destination)) {
                         $message = 'Файл успешно загружен';
                     } else {
@@ -308,6 +308,19 @@ class MainController extends Controller {
         }
     }
 
+    згидшс function handleImageUpload($file) {
+            if (!$file || $file['error'] === UPLOAD_ERR_NO_FILE || $file['error'] !== UPLOAD_ERR_OK) {
+                return null;
+            }
+            $uploadDir = 'uploads/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+            $fileName = uniqid() . '-' . basename($file['name']);
+            $uploadPath = $uploadDir . $fileName;
+            return move_uploaded_file($file['tmp_name'], $uploadPath) ? $uploadPath : null;
+        }
+
     public function validateRedactorBloga () {
         $this->model->validator->setRule('msg_theme', 'isNotEmpty');
         $this->model->validator->setRule('message', 'isNotEmpty');
@@ -318,11 +331,11 @@ class MainController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($this->model->validator->Validate($_POST)) {
                 $msg_theme = trim($_POST['msg_theme']);
-                $image = trim($_POST['image']);
+                $image = $this->handleImageUpload($_FILES['image'] ?? null);
                 $message = trim($_POST['message']);
 
                 BlogModel::createPost($msg_theme, $message, $image);
-            
+
                 $success_message = 'Пост успешно создан!';
             } else {
                 $fields = ['msg_theme', 'message'];
