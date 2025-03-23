@@ -41,9 +41,9 @@
         Где посмотреть данные
     </h2>
     <div class="info-container">
-        <div class="me-bio">
+        <div class="contact-form">
             <h3 class="highlight">Информация</h3>
-            <p style="position: sticky; z-index: 1000;">Для просмотра данных перейдите на страницу <a href="/web/web9/actionMyBlog">"Мой Блог"</a></p>
+            <p style="position: sticky; z-index: 1000;">Для просмотра данных перейдите на страницу <a href="/web/web9/main/actionMyBlog">"Мой Блог"</a></p>
         </div>
     </div>
 </section>
