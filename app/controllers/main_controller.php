@@ -308,18 +308,18 @@ class MainController extends Controller {
         }
     }
 
-    згидшс function handleImageUpload($file) {
-            if (!$file || $file['error'] === UPLOAD_ERR_NO_FILE || $file['error'] !== UPLOAD_ERR_OK) {
-                return null;
-            }
-            $uploadDir = 'uploads/';
-            if (!is_dir($uploadDir)) {
-                mkdir($uploadDir, 0777, true);
-            }
-            $fileName = uniqid() . '-' . basename($file['name']);
-            $uploadPath = $uploadDir . $fileName;
-            return move_uploaded_file($file['tmp_name'], $uploadPath) ? $uploadPath : null;
+    public function handleImageUpload($file) {
+        if (!$file || $file['error'] === UPLOAD_ERR_NO_FILE || $file['error'] !== UPLOAD_ERR_OK) {
+            return null;
         }
+        $uploadDir = 'uploads/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+        $fileName = uniqid() . '-' . basename($file['name']);
+        $uploadPath = $uploadDir . $fileName;
+        return move_uploaded_file($file['tmp_name'], $uploadPath) ? $uploadPath : null;
+    }
 
     public function validateRedactorBloga () {
         $this->model->validator->setRule('msg_theme', 'isNotEmpty');
