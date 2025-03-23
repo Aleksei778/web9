@@ -21,6 +21,7 @@ class TestModel extends BaseActiveRecord {
 
     public static function getAllTestResults() {
         $instance = new self();
+        echo $instance->tableName;
         $sql = "SELECT * FROM {$instance->tableName} ORDER BY created_at DESC";
         $stmt = $instance->pdo->prepare($sql);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
