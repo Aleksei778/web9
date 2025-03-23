@@ -238,12 +238,12 @@ class MainController extends Controller {
                         if ($row === 1) continue; // Пропускаем заголовок, если он есть
 
                         // Проверка количества полей
-                        if (count($data) !== 4) {
+                        if (count($data) !== 3) {
                             $errors[] = "Ошибка в строке $row: неверное количество полей";
                             continue;
                         }
 
-                        [$title, $message, $author, $created_at] = $data;
+                        [$title, $message, $created_at] = $data;
                     }
                 }
             } else {
@@ -253,6 +253,7 @@ class MainController extends Controller {
 
         $model = [
             'message' => $message,
+            'data' => $data,
             'error' => $error
         ];
 
