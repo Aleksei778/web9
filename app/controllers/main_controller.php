@@ -227,8 +227,8 @@ class MainController extends Controller {
             if (isset($_FILES['csv_file']) && $_FILES['csv_file']['error'] === UPLOAD_ERR_OK) {
                 $file = $_FILES['csv_file']['tmp_name'];
                 $fileType = mime_content_type($file);
-
-                if ($fileType !== 'text/csv') {
+                echo $fileType;
+                if ($fileType !== 'text/csv' && $fileType !== 'application/vnd.ms-excel') {
                     $error = "Файл должен быть в формате CSV";
                 } else {
 
