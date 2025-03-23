@@ -229,7 +229,7 @@ class MainController extends Controller {
                 $fileType = mime_content_type($file);
 
                 if ($fileType !== 'text/csv') {
-                    $errors['csv_file'] = "Файл должен быть в формате CSV";
+                    $error = "Файл должен быть в формате CSV";
                 } else {
 
                     echo "all normal";

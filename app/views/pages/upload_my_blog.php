@@ -12,10 +12,12 @@
                 <!-- Кнопка "Загрузить" -->
                 <button type="submit">Загрузить</button>
 
-                <?php if (isset($model['message']) && $model['message'] !== ''): ?>
-                    <div class="success-message"><?php echo $model['message']; ?></div>
-                <?php else: ?>
-                    <div class="error-message"><?php echo $model['error']; ?></div>    
+                <?php if (isset($model) && is_array($model)): ?>
+                    <?php if (!empty($model['message'])): ?>
+                        <div class="success-message"><?php echo htmlspecialchars($model['message']); ?></div>
+                            <?php elseif (!empty($model['error'])): ?>
+                        <div class="error-message"><?php echo htmlspecialchars($model['error']); ?></div>
+                    <?php endif; ?>
                 <?php endif; ?>
             </form>
         </div>
