@@ -224,18 +224,16 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $file = $_FILES['csv_file'];
-
-            if (isset($file) && $file['error'] === UPLOAD_ERR_OK) {
-                $file_t = $_FILES['csv_file']['tmp_name'];
-                $fileType = mime_content_type($file_t);
+            if (isset($_FILES['csv_file']) && $_FILES['csv_file']['error'] === UPLOAD_ERR_OK) {
+                $file = $_FILES['csv_file']['tmp_name'];
+                $fileType = mime_content_type($file);
 
                 if ($fileType !== 'text/csv') {
                     $errors['csv_file'] = "Файл должен быть в формате CSV";
                 } else {
 
                     echo "all normal";
-                    $handle = fopen($file_t, 'r');
+                    $handle = fopen($file, 'r');
                     $row = 0;
                     $successCount = 0;
 
@@ -260,6 +258,8 @@ class MainController extends Controller {
             } else {
                 $error = 'Ошибка загрузки CSV-файла: ' . $this->getUploadErrorMessage($file['error']);
             }
+        } else {
+            echo "Нет";
         }
 
         $model = [
