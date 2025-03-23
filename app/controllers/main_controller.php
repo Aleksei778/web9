@@ -314,7 +314,7 @@ class MainController extends Controller {
             return null;
         }
         echo $file;
-        $uploadDir = '/web9/web/public/uploads/';
+        $uploadDir = '/web/web9/public/uploads/';
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
         }
