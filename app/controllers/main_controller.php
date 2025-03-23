@@ -272,7 +272,7 @@ class MainController extends Controller {
         $this->view->render('pages/upload_my_blog.php', 'Загрузка сообщений блога', $model);
     }
 
-    public function uploadGuestBookFile() {
+    public function validateUploadGuestBookFile() {
         $message = '';
         $error = '';
 

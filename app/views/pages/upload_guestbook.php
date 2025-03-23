@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/web/web9/main/uploadGuestBookFile" method="POST" enctype="" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/web9/main/validateUploadGuestBookFile" method="POST" enctype="multipart/form-data" id="contactForm" style="position: sticky; z-index: 1000;">
                 <!-- Загрузка файла -->
                 <label for="file">Загрузка файла:</label>
                 <input type="file" name="message_file" accept=".inc" required>
