@@ -215,7 +215,11 @@ class MainController extends Controller {
         $this->view->render('pages/guestbook.php', 'Гостевая книга', $model);
     }
 
-    public function uploadMyBlog() {
+    public function actionUploadMyBlog() {
+        $this->view->render('pages/upload_my_blog.php', 'Загрузка сообщений блога', $model);
+    }
+
+    public function validateUploadMyBlog() {
         $success_message = '';
         $errors = [];
 
