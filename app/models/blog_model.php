@@ -13,7 +13,7 @@ class BlogModel extends BaseActiveRecord {
         $post = new self();
         $post->topic = $topic;
         $post->image = $image;
-        $post->content = $content_text;
+        $post->content_text = $content;
         $post->created_at = date('Y-m-d H:i:s');
 
         return $post->save();
