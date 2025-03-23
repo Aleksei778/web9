@@ -310,8 +310,10 @@ class MainController extends Controller {
 
     public function handleImageUpload($file) {
         if (!$file || $file['error'] === UPLOAD_ERR_NO_FILE || $file['error'] !== UPLOAD_ERR_OK) {
+            echo 'no file';
             return null;
         }
+        echo $file;
         $uploadDir = 'uploads/';
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
