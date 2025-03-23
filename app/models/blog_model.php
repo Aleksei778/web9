@@ -9,12 +9,12 @@ class BlogModel extends BaseActiveRecord {
         parent::__construct();
     }
 
-    public static function createPost($topic, $content, $image = null) {
+    public static function createPost($topic, $content, $created_at, $image = null) {
         $post = new self();
         $post->topic = $topic;
         $post->image = $image;
         $post->content_text = $content;
-        $post->created_at = date('Y-m-d H:i:s');
+        $post->created_at = $created_at; // date('Y-m-d H:i:s');
 
         return $post->save();
     }

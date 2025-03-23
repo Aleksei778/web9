@@ -216,7 +216,7 @@ class MainController extends Controller {
     }
 
     public function uploadMyBlog() {
-        $message = '';
+        $success_message = '';
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -244,6 +244,10 @@ class MainController extends Controller {
                         }
 
                         [$title, $message, $created_at] = $data;
+
+                        BlogModel::createPost($title, $message, $created_at);
+
+                        $success_message = 'Пост успешно создан!';
                     }
                 }
             } else {
@@ -252,8 +256,7 @@ class MainController extends Controller {
         }
 
         $model = [
-            'message' => $message,
-            'data' => $data,
+            'message' => $success_message,
             'error' => $error
         ];
 
@@ -337,7 +340,8 @@ class MainController extends Controller {
                 $image = $this->handleImageUpload($_FILES['image'] ?? null);
                 $message = trim($_POST['message']);
 
-                BlogModel::createPost($msg_theme, $message, $image);
+                $created_at = date('Y-m-d H:i:s');
+                BlogModel::createPost($msg_theme, $message, $created_at, $image);
 
                 $success_message = 'Пост успешно создан!';
             } else {
