@@ -31,7 +31,6 @@ class TestModel extends BaseActiveRecord {
             $test->id = $result['id'];
             unset($result['id']);
             $test->attributes = $result;
-            echo $test->attributes['full_name'];
             $tests[] = $test;
         }
         echo $tests[0]->attributes['full_name'];
