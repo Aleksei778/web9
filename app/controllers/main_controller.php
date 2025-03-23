@@ -233,11 +233,14 @@ class MainController extends Controller {
                 if ($fileType !== 'text/csv') {
                     $errors['csv_file'] = "Файл должен быть в формате CSV";
                 } else {
+
+                    echo "all normal";
                     $handle = fopen($file_t, 'r');
                     $row = 0;
                     $successCount = 0;
 
                     while (($data = fgetcsv($handle, 1000, ',')) !== false) {
+                        echo "in while";
                         $row++;
                         if ($row === 1) continue; // Пропускаем заголовок, если он есть
 
@@ -248,7 +251,7 @@ class MainController extends Controller {
                         }
 
                         [$title, $message, $created_at] = $data;
-
+                        echo $title;
                         BlogModel::createPost($title, $message, $created_at);
 
                         $success_message = 'Пост успешно создан!';
