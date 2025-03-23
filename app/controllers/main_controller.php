@@ -216,7 +216,7 @@ class MainController extends Controller {
     }
 
     public function actionUploadMyBlog() {
-        $this->view->render('pages/upload_my_blog.php', 'Загрузка сообщений блога', $model);
+        $this->view->render('pages/upload_my_blog.php', 'Загрузка сообщений блога');
     }
 
     public function validateUploadMyBlog() {
