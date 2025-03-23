@@ -271,7 +271,7 @@ class MainController extends Controller {
                 $fileTmpPath = $file['tmp_name'];
 
                 if ($fileName === 'messages.inc') {
-                    $destination = '../messages.inc';
+                    $destination = 'messages.inc';
                     if (move_uploaded_file($fileTmpPath, $destination)) {
                         $message = 'Файл успешно загружен';
                     } else {
@@ -314,7 +314,7 @@ class MainController extends Controller {
             return null;
         }
         echo $file;
-        $uploadDir = 'uploads/';
+        $uploadDir = '/web9/web/public/uploads/';
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
         }
