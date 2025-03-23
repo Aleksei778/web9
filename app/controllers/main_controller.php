@@ -110,8 +110,6 @@ class MainController extends Controller {
     
         // Получение всех сохранённых результатов из базы данных
         $tests = TestModel::getAllTestResults();
-        echo "Результат в контроллере: ";
-        var_dump($tests);
         // Подготовка данных для передачи в представление
         $model = [
             'errors' => $errors,

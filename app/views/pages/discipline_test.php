@@ -111,7 +111,7 @@
     <h2>
         Таблица результатов
     </h2>
-    <?php if (!empty($data['results'])): ?>
+    <?php if (!empty($model['results'])): ?>
     <div class="cur_view-table">
         <table id="cur_view-table">
             <thead>
